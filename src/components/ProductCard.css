@@ -1,0 +1,95 @@
+.product-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+}
+
+.product-card.out-of-stock {
+  opacity: 0.6;
+  background-color: #f8fafc;
+  filter: grayscale(100%);
+}
+
+.product-card.out-of-stock:hover {
+  transform: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-badge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.card-category {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 8px 0;
+}
+
+.stock-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.stock-label.in { background: #dcfce7; color: #166534; }
+.stock-label.out { background: #fee2e2; color: #991b1b; }
+
+.add-btn {
+  margin-top: auto;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  background: #1e293b;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.add-btn:hover:not(:disabled) { background: #334155; }
+.add-btn:active:not(:disabled) { transform: scale(0.98); }
+.add-btn:disabled { background: #cbd5e1; color: #94a3b8; cursor: not-allowed; }
